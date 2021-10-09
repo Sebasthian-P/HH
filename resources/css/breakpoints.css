@@ -1,69 +1,9 @@
-@media only screen and (max-width: 690px) {
-    header .nav_bar .lists {
-        display: none;
+@media only screen and (max-width: 600px) {
+    .bg {
+        background-image: url(/resources/images/hh-mobile-bg.jpeg);
     }
 
-    header .nav_bar .logo {
-        text-align: center;
-    }
-
-    header .nav_bar .grip_line {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header .nav_bar .grip_line i {
-        transition: all 200ms;
-        font-size: 25px;
-    }
-
-    header .nav_bar .grip_line i.fa-times {
-        position: absolute;
-        opacity: 0;
-    }
-
-    header .nav_bar .lists_mobile {
-        display: block;
-        position: absolute;
-        top: -200px;
-        right: 15px;
-        background-color: rgba(0, 0, 0, .5);
-        color: #fff;
-        border-radius: 10px;
-        padding: 15px;
-        font-size: 1.4em;
-        opacity: 1;
-        transition: all 400ms;
-        z-index: -1;
-    }
-
-    header .nav_bar .grip_line:hover i.fa-grip-lines {
-        opacity: 0;
-    }
-
-    header .nav_bar .grip_line:hover i.fa-times {
-        opacity: 1;
-    }
-
-    header .nav_bar .grip_line:hover .lists_mobile {
-        top: 80px;
-    }
-
-    .gallery_cont {
-        padding: 10px;
-    }
-}
-
-
-@media only screen and (max-width: 500px) {
-
-    .bg_cover .desktop{
-        display: none;
-    }
-
-    .bg_cover .mobile {
-        display: block;
-        width: 400px;
+    .question_cont #logo {
+        width: 250px;
     }
 }

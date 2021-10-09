@@ -9,173 +9,114 @@ html {
 }
 
 body {
-    user-select: none;
+    min-width: 390px;
 }
 
-li {
-    list-style: none;
-}
-
-.grip_line,
-.lists_mobile,
-.bg_cover .mobile {
-    display: none;
-}
-
-header {
-    font-family: 'Teko', sans-serif;
-    width: 100%;
-    height: 8vh;
-    position: sticky;
-    top: 0px;
-    z-index: 1000;
-}
-
-header .nav_bar {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 25px;
-    font-size: 20px;
-    box-shadow: 0px 0px 20px -10px #000;
-}
-
-header .nav_bar .logo,
-header .nav_bar .lists {
-    flex-grow: 1;
-    font-size: 1em;
-    cursor: pointer;
-    pointer-events: none;
-}
-
-header .nav_bar .logo {
-    flex-grow: 9;
-    letter-spacing: 1px;
-}
-
-header .nav_bar .lists {
-    font-size: 1.2em;
-    display: flex;
-    justify-content: space-between;
-    letter-spacing: 1.5px;
-}
-
-header .nav_bar .lists li {
-    padding: 3px 20px;
-    border-radius: 18px;
-    transition: all 200ms;
-}
-
-header .nav_bar .lists li:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-header .nav_bar .lists :nth-child(1) {
-    background-color: #000;
-    color: #fff;
-}
-
-
-/*  Cover  */
-
-main {
-    position: relative;
-    width: 100%;
-}
-
-.cover,
-.bg_cover {
-    height: calc(100vh - 8vh);
-}
-
-.cover {
-    width: 100%;
-    background-image: url(https://wallpapercave.com/wp/wp8330418.jpg);
-    background-position: center;
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/resources/images/hh-desktop-bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-}
-
-.bg_cover {
-    width: 100%;
-    background-color: rgb(0, 0, 0, .5);
+    background-position: center;
     position: absolute;
     z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.bg_cover .desktop {
-    display: block;
-    width: 400px;
-}
-
-
-/*  Gallery  */
-
-.gallery_cont {
-    font-family: 'Concert One', cursive;
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 50px;
-}
-
-.gallery_cont h2 {
-    margin: 0 30px 50px;
-}
-
-.gallery_cont .gallery {
-    columns: 3 350px;
-    gap: 10px;
-    background-color: rgba(216, 214, 214, 0.253);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.gallery_cont .gallery .cont {
-    position: relative;
-    cursor: pointer;
-}
-
-.gallery_cont .gallery .bg_image {
+.container {
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, .5);
-    color: #fff;
-    position: absolute;
-    z-index: 50;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    z-index: 100;
+}
+
+
+/* --- Question --- */
+
+
+.question_cont {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question_cont #logo {
+    width: 290px;
+    margin: 40px;
+}
+
+.question_cont #question {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: none;
+    outline: 1px dashed #000;
+    outline-offset: -3px;
+    width: 190px;
+    transition: all 300ms;
+}
+
+.question_cont #question::placeholder {
+    letter-spacing: 3px;
+    text-align: center;
+    color: #000;
+}
+
+.question_cont #question:focus {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* --- Banner Youtube Gold --- */
+
+
+.container .banner_yt {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    font-size: .7em;
-    transition: all 200ms;
-    opacity: 0;
+    position: absolute;
+    color: #fff;
+    font-family: 'Indie Flower', cursive;
+    margin: 30px;
 }
 
-.gallery_cont .gallery .bg_image h2{
-    margin-bottom: 10px;
+.container .banner_yt h3 {
+    font-size: .9rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.gallery_cont .gallery .cont img {
-    display: block;
+.container .banner_yt:hover #logo_gold {
+    width: 285px;
+}
+
+.container .banner_yt #logo_gold {
+    width: 270px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.container .banner_yt #logo_gold:hover {
+    width: 295px;
+}
+
+
+/* --- Background --- */
+
+
+.bg_ {
     width: 100%;
-    margin-bottom: 10px;
-    outline: 2px solid #fff;
-    outline-offset: -10px;
-}
-
-.gallery_cont .gallery .cont:hover .bg_image {
-    opacity: 1;
-}
-
-.gallery_cont .gallery .cont:hover img{
-    outline: none;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 70;
+    position: absolute;
+    backdrop-filter: blur(3px);
 }
