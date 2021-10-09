@@ -15,7 +15,7 @@ body {
 .bg {
     width: 100vw;
     height: 100vh;
-    background-image: url(/resources/images/hh-desktop-bg.jpeg);
+    background-image: url(resources/images/hh-desktop-bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
