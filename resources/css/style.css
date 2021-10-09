@@ -8,10 +8,6 @@ html {
     font-size: 20px;
 }
 
-body {
-    min-width: 390px;
-}
-
 .bg {
     width: 100vw;
     height: 100vh;
