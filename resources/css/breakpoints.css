@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
     .bg {
-        background-image: url(/resources/images/hh-mobile-bg.jpeg);
+        background-image: url(../images/hh-mobile-bg.jpeg);
     }
 
     .question_cont #logo {
